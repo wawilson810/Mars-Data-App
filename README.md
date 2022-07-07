@@ -1,1 +1,6 @@
 # web-scraping-challenge
+This repository contains an app that utilizes Flask, Splinter and MongoDB to scrape data about Mars from various sites. The [Mission_to_Mars](https://github.com/wawilson810/web-scraping-challenge/tree/main/Missions_to_Mars) folder contains the jupyter notebook that was used to prototype the data scraping ([mission_to_mars.ipynb](https://github.com/wawilson810/web-scraping-challenge/blob/main/Missions_to_Mars/mission_to_mars.ipynb)), the python file which runs the app ([scrape_mars.py](https://github.com/wawilson810/web-scraping-challenge/blob/main/Missions_to_Mars/scrape_mars.py)) and a folder containing the html that loads formats the site for the app ([index.html](https://github.com/wawilson810/web-scraping-challenge/blob/main/Missions_to_Mars/templates/index.html)).
+
+The app sources recent headlines related to Mars from the [Nasa's MARS Planet Science](https://redplanetscience.com/), the featured image from [NASA's Jet Propulsion Lab](https://spaceimages-mars.com/), facts about Mars from [Galaxy Facts](https://galaxyfacts-mars.com/) and the names of Mars' hemispheres and their images from [Astropedia](https://marshemispheres.com/).
+
+An example image of the site displaying the app can be found [here](https://github.com/wawilson810/web-scraping-challenge/blob/main/site-example.png).
