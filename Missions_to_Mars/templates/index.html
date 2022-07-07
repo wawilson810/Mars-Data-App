@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" id = "headline">
+        <div class = "col-md-12 text-center">
+            <h2>Latest Mars News</h2>
+            <h4 class="heading">{{mars_data.news.title}}</h4>
+            <p>{{mars_data.news.text}}</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" id = "data">
+        <div class="col-md-6 text-center">
+            <h2>Featured Mars Image</h2>
+            <img src={{mars_data.featured_image}}>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <h2>Mars Facts</h2>
+            {{mars_data.data_table | safe}}
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-center" id = "hem-break">
+        <div class="col-md-12 text-center"><h2>Mars' Hemispheres</h2></div>
+    </div>
+    <div class="row justify-content-center" id = "hemispheres">
+        {% for hemi in mars_data.hemispheres %}
+        <div class="col-md-3 text-center">
+            <img src={{hemi.img_url}} width="200" height="200">
+            <h4>{{hemi.title}}</h4>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
